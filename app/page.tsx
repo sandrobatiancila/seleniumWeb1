@@ -1,91 +1,119 @@
 "use client"
 
+import { computeArithmetic } from "./utils/util";
+
 export default function Home() {
   const onPress1 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "1"
     }
   }
 
   const onPress2 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "2"
     }
   }
   const onPress3 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "3"
     }
   }
   const onPress4 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "4"
     }
   }
   const onPress5 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "5"
     }
   }
   const onPress6 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "6"
     }
   }
   const onPress7= () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "7"
     }
   }
   const onPress8 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "8"
     }
   }
   const onPress9 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "9"
     }
   }
   const onPress0 = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "0"
     }
   }
 
   const onPressDot = () => {
-    const tag = document.getElementById("text-result") as unknown as HTMLInputElement;
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
     if (tag) {
       tag.value += "."
     }
   }
   
-  const onPressSub = () => {}
-  const onPressAdd = () => {}
-  const onPressMult = () => {}
-  const onPressDiv = () => {}
-  const onPressEq = () => {}
+  const onPressSub = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "-"
+    }
+  }
+  const onPressAdd = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "+"
+    }
+  }
+  const onPressMult = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "*"
+    }
+  }
+  const onPressDiv = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "/"
+    }
+  }
+  const onPressEq = () => {
+    const inputtedValues =  document.getElementById("input-result") as unknown as HTMLInputElement;
+    const result = computeArithmetic(inputtedValues.value);
+    if (inputtedValues) {
+      inputtedValues.value = result?.toString()
+    }
+  }
 
   return (
     <div className=" p-5 w-full bg-white">
-      <div className=" w-1/2 justify-self-center">
-      <span className=" text-center self-center justify-self-center text-[30px] text-emerald-700" id="text-welcome">Welcome</span>
+      <div className=" w-1/2 justify-self-center flex flex-col items-center">
+        <span className=" text-[30px] text-emerald-700" id="text-welcome">Welcome</span>
         {/* TEXT INPUT */}
         <input type="text" placeholder="0.00" className=" w-full p-5 bg-[#333] rounded-sm text-[50px]" id="input-result"/>
       </div>
       {/*  1-3 */}
       <div className=" w-1/2 justify-self-center flex justify-center items-center m-3 p-2 gap-[20px]">
-        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress1}>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress1} name="1">
           <span className=" text-[50px]">1</span>
         </button>
         <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress2}>

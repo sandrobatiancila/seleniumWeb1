@@ -107,13 +107,13 @@ export default function Home() {
   return (
     <div className=" p-5 w-full bg-white">
       <div className=" w-1/2 justify-self-center flex flex-col items-center">
-        <span className=" text-[30px] text-emerald-700" id="text-welcome">Welcome</span>
+        <label className=" text-[30px] text-emerald-700" id="text-welcome">Welcome</label>
         {/* TEXT INPUT */}
         <input type="text" placeholder="0.00" className=" w-full p-5 bg-[#333] rounded-sm text-[50px]" id="input-result"/>
       </div>
       {/*  1-3 */}
       <div className=" w-1/2 justify-self-center flex justify-center items-center m-3 p-2 gap-[20px]">
-        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress1} name="1">
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress1}>
           <span className=" text-[50px]">1</span>
         </button>
         <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress2}>
@@ -171,6 +171,9 @@ export default function Home() {
         <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPressEq}>
           <span className=" text-[50px]">=</span>
         </button>
+      </div>
+      <div className=" w-1/2 justify-self-center flex flex-col items-center">
+        <span className=" text-center text-emerald-700 text-[50px]">Version 1.0.0</span>
       </div>
     </div>
   );

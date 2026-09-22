@@ -105,7 +105,7 @@ export default function Home() {
   }
 
   return (
-    <div className=" p-5 w-full bg-white">
+    <div className=" p-5 w-full bg-[#dcdcdc]">
       <div className=" w-1/2 justify-self-center flex flex-col items-center">
         <label className=" text-[30px] text-emerald-700" id="text-welcome">Welcome</label>
         {/* TEXT INPUT */}

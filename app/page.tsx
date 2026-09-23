@@ -100,7 +100,7 @@ export default function Home() {
     const inputtedValues =  document.getElementById("input-result") as unknown as HTMLInputElement;
     const result = computeArithmetic(inputtedValues.value);
     if (inputtedValues) {
-      inputtedValues.value = result?.toString()
+      inputtedValues.value = result?.toFixed(2);
     }
   }
 

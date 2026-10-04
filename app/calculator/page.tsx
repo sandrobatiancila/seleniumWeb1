@@ -1,0 +1,180 @@
+"use client"
+
+import { computeArithmetic } from "../utils/util";
+
+export default function Home() {
+  const onPress1 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "1"
+    }
+  }
+
+  const onPress2 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "2"
+    }
+  }
+  const onPress3 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "3"
+    }
+  }
+  const onPress4 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "4"
+    }
+  }
+  const onPress5 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "5"
+    }
+  }
+  const onPress6 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "6"
+    }
+  }
+  const onPress7= () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "7"
+    }
+  }
+  const onPress8 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "8"
+    }
+  }
+  const onPress9 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "9"
+    }
+  }
+  const onPress0 = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "0"
+    }
+  }
+
+  const onPressDot = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "."
+    }
+  }
+  
+  const onPressSub = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "-"
+    }
+  }
+  const onPressAdd = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "+"
+    }
+  }
+  const onPressMult = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "*"
+    }
+  }
+  const onPressDiv = () => {
+    const tag = document.getElementById("input-result") as unknown as HTMLInputElement;
+    if (tag) {
+      tag.value += "/"
+    }
+  }
+  const onPressEq = () => {
+    const inputtedValues =  document.getElementById("input-result") as unknown as HTMLInputElement;
+    const result = computeArithmetic(inputtedValues.value);
+    if (inputtedValues) {
+      inputtedValues.value = result?.toFixed(2);
+    }
+  }
+
+  return (
+    <div className=" p-5 w-full bg-[#dcdcdc]">
+      <div className=" w-1/2 justify-self-center flex flex-col items-center">
+        <label className=" text-[30px] text-emerald-700" id="text-welcome">Welcome</label>
+        {/* TEXT INPUT */}
+        <input type="text" placeholder="0.00" className=" w-full p-5 bg-[#333] rounded-sm text-[50px]" id="input-result"/>
+      </div>
+      {/*  1-3 */}
+      <div className=" w-1/2 justify-self-center flex justify-center items-center m-3 p-2 gap-[20px]">
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress1}>
+          <span className=" text-[50px]">1</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress2}>
+          <span className=" text-[50px]">2</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress3}>
+          <span className=" text-[50px]">3</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPressSub}>
+          <span className=" text-[50px]">-</span>
+        </button>
+      </div>
+      {/* 4-6  */}
+      <div className=" w-1/2 justify-self-center flex justify-center items-center m-3 p-2 gap-[20px]">
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress4}>
+          <span className=" text-[50px]">4</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress5}>
+          <span className=" text-[50px]">5</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress6}>
+          <span className=" text-[50px]">6</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPressAdd}>
+          <span className=" text-[50px]">+</span>
+        </button>
+      </div>
+      {/* 6-9 */}
+      <div className=" w-1/2 justify-self-center flex justify-center items-center m-3 p-2 gap-[20px]">
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress7}>
+          <span className=" text-[50px]">7</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress8}>
+          <span className=" text-[50px]">8</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress9}>
+          <span className=" text-[50px]">9</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer"
+          onClick={onPressMult}>
+          <span className=" text-[50px]">*</span>
+        </button>
+      </div>
+      {/* 0-= */}
+      <div className=" w-1/2 justify-self-center flex justify-center items-center m-3 p-2 gap-[20px]">
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPress0}>
+          <span className=" text-[50px]">0</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPressDiv}>
+          <span className=" text-[50px]">/</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPressDot}>
+          <span className=" text-[50px]">.</span>
+        </button>
+        <button className=" w-30 rounded-sm p-5 bg-emerald-700 cursor-pointer" onClick={onPressEq}>
+          <span className=" text-[50px]">=</span>
+        </button>
+      </div>
+      <div className=" w-1/2 justify-self-center flex flex-col items-center">
+        <span className=" text-center text-emerald-700 text-[50px]">Version 1.0.0</span>
+      </div>
+    </div>
+  );
+}

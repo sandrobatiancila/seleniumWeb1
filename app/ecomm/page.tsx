@@ -23,9 +23,16 @@ export default function EcommPage() {
             quantity: 5
         },
     ];
+    const onView = () => {
+
+    }
+    const onPurchase = () => {
+
+    }
+
     return <div>
         <div className=" flex justify-end">
-            <p className=" border-1 rounded-full w-xs bg-amber-300 text-center">Cart (0)</p>
+            <p className=" border rounded-full w-xs bg-amber-300 text-center">Cart (0)</p>
         </div>
         <div className=" border-2 rounded-full w-xs bg-amber-300 text-center">
             <span className=" text-black">Product Listing</span>
@@ -39,8 +46,10 @@ export default function EcommPage() {
                         <p className=" text-gray-500">Quantity: {product.quantity}</p>
                         <div className=" mt-2" />
                         <div className=" grid grid-cols-2 gap-2">
-                            <button className=" rounded-full bg-cyan-700 cursor-pointer p-1">View</button>
-                            <button className=" rounded-full bg-teal-700 cursor-pointer p-1">Add to Cart</button>
+                            <button className=" rounded-full bg-cyan-700 cursor-pointer p-1"
+                            onClick={onView}>View</button>
+                            <button className=" rounded-full bg-teal-700 cursor-pointer p-1"
+                            onClick={onPurchase}>Add to Cart</button>
                         </div>
                     </div>
                 ))

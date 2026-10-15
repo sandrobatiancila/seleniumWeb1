@@ -1,6 +1,10 @@
+'use client';
+
+import { useRouter } from "next/navigation";
 import { ProductDTO } from "../dto/product.dot"
 
 export default function EcommPage() {
+    const router = useRouter()
     const prodcuts: ProductDTO[] = [
         {
             name: "Hansel",
@@ -23,8 +27,9 @@ export default function EcommPage() {
             quantity: 5
         },
     ];
-    const onView = () => {
-
+    const onView = (item: ProductDTO) => {
+        const params = new URLSearchParams({name: item.name, price: item.price, quantity: item.quantity});
+        router.push(`/ecomm/view-product?${params.toString()}`);
     }
     const onPurchase = () => {
 
@@ -45,9 +50,9 @@ export default function EcommPage() {
                         <p className=" text-gray-500">Price: {product.price}</p>
                         <p className=" text-gray-500">Quantity: {product.quantity}</p>
                         <div className=" mt-2" />
-                        <div className=" grid grid-cols-2 gap-2">
+                        <div className=" grid grid-cols-2 gap-2 sm:grid-cols-2">
                             <button className=" rounded-full bg-cyan-700 cursor-pointer p-1"
-                            onClick={onView}>View</button>
+                            onClick={() => onView(product)}>View</button>
                             <button className=" rounded-full bg-teal-700 cursor-pointer p-1"
                             onClick={onPurchase}>Add to Cart</button>
                         </div>
